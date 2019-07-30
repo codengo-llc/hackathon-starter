@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "postinstall": "npm rebuild node-sass",
-    "start": "node app.js",
+    "start": "brew services start mongodb-community@4.0 && PORT=3000 node app.js",
     "test": "nyc mocha --timeout=10000 --exit",
     "lint": "eslint \"**/*.js\""
   },
